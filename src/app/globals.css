@@ -1,26 +1,370 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #FFFFFF;
+  color: #000000;
+  font-family: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+}
+
+/* Reusable top fade mask for images; minimal top gradient */
+.top-fade {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, rgba(0,0,0,0.3) 4rem, rgba(0,0,0,0.7) 8rem, black 12rem, black 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, rgba(0,0,0,0.3) 4rem, rgba(0,0,0,0.7) 8rem, black 12rem, black 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+@media (max-width: 600px) {
+  .top-fade {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, rgba(0,0,0,0.2) 0.5rem, rgba(0,0,0,0.5) 1rem, black 1.5rem, black 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, rgba(0,0,0,0.2) 0.5rem, rgba(0,0,0,0.5) 1rem, black 1.5rem, black 100%);
+  }
+}
+
+/* Masonry layout utilities */
+.masonry {
+  column-gap: 20px;
+}
+@media (min-width: 640px) {
+  .masonry { column-count: 2; }
+}
+@media (min-width: 1024px) {
+  .masonry { column-count: 3; }
+}
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+
+/* Span across all masonry columns */
+.masonry-span-all {
+  column-span: all;
+  display: block;
+}
+
+/* Anton font utility */
+.anton-regular {
+  font-family: var(--font-anton), "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Inter variable font utility with configurable weight */
+.inter-regular {
+  font-family: var(--font-inter), "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.inter-bold {
+  font-family: var(--font-inter), "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Outline text utility for big word */
+.stroke-outline {
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: rgba(130, 130, 130, 0.5);
+}
+
+/* Scroll indicator animations */
+@keyframes scrollWheel {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  60% { transform: translateY(6px); opacity: 0.4; }
+}
+@keyframes chevronDown {
+  0% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(6px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.6; }
+}
+.animate-scroll-wheel { animation: scrollWheel 2.2s ease-in-out infinite; }
+.animate-chevron { animation: chevronDown 2.2s ease-in-out infinite; }
+
+/* Entrance animations */
+@keyframes fadeDownBlur {
+  0% { opacity: 0; transform: translateY(-14px); filter: blur(6px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(22px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes zoomInSoft {
+  0% { opacity: 0; transform: scale(0.97); }
+  100% { opacity: 1; transform: scale(1); }
+}
+/* Slower, smoother curves */
+.animate-fade-down { animation: fadeDownBlur 900ms cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.animate-fade-up { animation: fadeUp 1000ms cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.animate-zoom-in { animation: zoomInSoft 1100ms cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.animate-delay-1 { animation-delay: 180ms; }
+.animate-delay-2 { animation-delay: 360ms; }
+.animate-delay-3 { animation-delay: 540ms; }
+
+/* Plane fly-through animation */
+@keyframes planeFlyThrough {
+  0% {
+    transform: scale(0.65) translateZ(0);
+    opacity: 0;
+    filter: blur(1px);
+  }
+  10% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  70% {
+    transform: scale(2);
+    opacity: 1;
+    filter: blur(0.5px);
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+    filter: blur(2px);
+  }
+}
+.animate-plane-fly {
+  animation: planeFlyThrough 2000ms linear infinite;
+  will-change: transform, opacity, filter;
+  transform-origin: center center;
+}
+
+/* New: plane sweep from left to right once */
+@keyframes planeSweep {
+  0% {
+    transform: translate(-120%, -42%) scale(1.5);
+    opacity: 0.0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(10%, -42%) scale(1.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(200%, -42%) scale(2.2);
+    opacity: 0.0;
+  }
+}
+.animate-plane-sweep {
+  animation: planeSweep 1300ms linear 1 both;
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+
+/* Background image slide-in after plane pass */
+@keyframes bgSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-6%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-bg-in {
+  animation: bgSlideIn 700ms ease-out 1400ms both;
+}
+
+/* Zoom-in like animate.css (animate__zoomIn) */
+@keyframes zoomInLike {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+.animate-zoom-in-like {
+  animation: zoomInLike 900ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
+}
+/* Delayed variant to wait for plane sweep (1300ms + 100ms buffer) */
+.animate-zoom-in-like-delayed {
+  animation: zoomInLike 900ms cubic-bezier(0.55, 0.055, 0.675, 0.19) 1000ms both;
+}
+
+/* Car sweep from right to left - faster and simultaneous with plane */
+@keyframes carSweep {
+  0% {
+    transform: translate(120%, 0%) scale(1.2);
+    opacity: 0.0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-10%, 0%) scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-200%, 0%) scale(1.6);
+    opacity: 0.0;
+  }
+}
+.animate-car-sweep {
+  animation: carSweep 1000ms linear 1 both; /* Faster than plane (1300ms) */
+  animation-delay: 0ms; /* Start at the same time as plane */
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+
+/* Floating animation for circular borders */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) scale(1); 
+    opacity: 0.4;
+  }
+  50% { 
+    transform: translateY(-20px) scale(1.02); 
+    opacity: 0.8;
+  }
+}
+
+/* Scroll-triggered animation states */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-animate-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate-fade-up.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-animate-fade-down {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate-fade-down.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-animate-zoom {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.scroll-animate-zoom.animate-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered animation delays */
+.scroll-delay-1 { transition-delay: 0.1s; }
+.scroll-delay-2 { transition-delay: 0.2s; }
+.scroll-delay-3 { transition-delay: 0.3s; }
+.scroll-delay-4 { transition-delay: 0.4s; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-down,
+  .animate-fade-up,
+  .animate-zoom-in,
+  .animate-plane-fly,
+  .animate-plane-sweep,
+  .animate-car-sweep,
+  .animate-scroll-wheel,
+  .animate-chevron,
+  .scroll-animate,
+  .scroll-animate-fade-up,
+  .scroll-animate-fade-down,
+  .scroll-animate-zoom {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ShipSection Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.8s ease-out forwards;
+  opacity: 0;
 }
