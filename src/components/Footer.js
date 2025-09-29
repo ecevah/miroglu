@@ -1,18 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useI18n } from "@/i18n/I18nProvider";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 function FooterCopyright({ t }) {
-  const [year, setYear] = useState(null);
-  useEffect(() => {
-    setYear(new Date().getFullYear());
-  }, []);
   return (
     <p className="text-sm text-gray-500 mb-4 md:mb-0">
-      © <span suppressHydrationWarning>{year ?? ""}</span>{" "}
-      {t.footer?.companyName || "Miroğlu Lojistik"}.{" "}
+      © {new Date().getFullYear()}{" "}
+      {t.footer?.companyName || "MY Miroğlu Lojistik"}.{" "}
       {t.footer?.rights || "Tüm hakları saklıdır."}
     </p>
   );
