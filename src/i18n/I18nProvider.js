@@ -10,8 +10,10 @@ const I18nContext = createContext({
 
 export function I18nProvider({ children }) {
   const [lang, setLang] = useState("tr");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const stored =
       typeof window !== "undefined" ? localStorage.getItem("lang") : null;
     if (stored && (stored === "tr" || stored === "en")) {
@@ -24,9 +26,9 @@ export function I18nProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    if (typeof window !== "undefined") localStorage.setItem("lang", lang);
+    if (mounted && typeof window !== "undefined") localStorage.setItem("lang", lang);
     if (typeof document !== "undefined") document.documentElement.lang = lang;
-  }, [lang]);
+  }, [lang, mounted]);
 
   const value = useMemo(
     () => ({ lang, t: translations[lang], setLang }),

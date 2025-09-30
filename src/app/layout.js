@@ -353,7 +353,7 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="tr">
+    <html lang="tr" className="!bg-white">
       <head>
         {/* Hreflang Links for International SEO */}
         <link
@@ -388,7 +388,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${inter.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${inter.variable} antialiased bg-white`}
       >
         <I18nProvider>
           {children}

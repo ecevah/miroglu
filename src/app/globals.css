@@ -3,12 +3,24 @@
 html {
   scroll-behavior: smooth;
   background-color: #FFFFFF;
+  /* Smooth scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+  /* Prevent blue overscroll areas */
+  overscroll-behavior: none;
+  /* Force white background on all overscroll areas */
+  background: #FFFFFF !important;
 }
 
 body {
   background: #FFFFFF;
   color: #000000;
   font-family: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+  /* Smooth scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+  /* Prevent blue overscroll areas */
+  overscroll-behavior: none;
+  /* Force white background */
+  background: #FFFFFF !important;
 }
 
 /* Reusable top fade mask for images; minimal top gradient */
@@ -368,4 +380,35 @@ body {
 .animate-fade-in-scale {
   animation: fadeInScale 0.8s ease-out forwards;
   opacity: 0;
+}
+
+/* Mobile overscroll area fixes - prevent blue areas */
+@media (max-width: 768px) {
+  html, body {
+    /* Prevent all overscroll behaviors that show blue areas */
+    overscroll-behavior: none;
+    overscroll-behavior-y: none;
+    overscroll-behavior-x: none;
+    /* Force white background on overscroll */
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+  }
+  
+  /* iOS Safari specific fixes */
+  @supports (-webkit-touch-callout: none) {
+    html, body {
+      /* iOS Safari overscroll prevention */
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: none;
+      background: #FFFFFF !important;
+    }
+  }
+  
+  /* Android Chrome specific fixes */
+  @supports (display: -webkit-box) {
+    html, body {
+      overscroll-behavior: none;
+      background: #FFFFFF !important;
+    }
+  }
 }

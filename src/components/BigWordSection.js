@@ -12,7 +12,7 @@ export default function BigWordSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden bg-transparent pb-30"
+      className="relative w-full overflow-hidden bg-transparent py-30"
     >
       {/* Background image inside layout max width */}
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 md:px-8">

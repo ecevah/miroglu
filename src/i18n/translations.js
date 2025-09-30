@@ -5,9 +5,9 @@ export const translations = {
       title: "Solutions That Shrink the World",
     },
     contact: {
-      title: "Contact Us",
+      title: "Let's Connect",
       subtitle:
-        "Get in touch with us for your questions. We will get back to you as soon as possible.",
+        "Ready to discuss your logistics needs? We'd love to hear from you and will respond promptly to help you find the perfect solution.",
       nameLabel: "Full Name",
       namePlaceholder: "Enter your first and last name",
       emailLabel: "Email",
@@ -15,22 +15,26 @@ export const translations = {
       messageLabel: "Your Message",
       messagePlaceholder: "Write your message here...",
       submitButton: "Send",
+      sending: "Sending...",
+      headquarters: "Headquarters",
+      garage: "Garage",
+      headquartersAddress: "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
+      garageAddress: "Kemalpaşa OSB, 78. Sk. 40-78, 35730 Kemalpaşa/İzmir",
     },
     footer: {
       companyName: "MY Miroğlu Logistics",
       companyDescription:
-        "We are shrinking the world with reliable and professional logistics services. We are with you with our experienced team serving in 20+ countries.",
+        "Your trusted partner in global logistics. We bring the world closer with our reliable, professional services and experienced team serving across 20+ countries.",
       quickLinks: "Quick Links",
       contactInfo: "Contact Information",
       address: "Address",
-      addressValue:
-        "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
+      addressValue: "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
       phone: "Phone",
       phoneValue: "+90 532 431 19 53",
       email: "Email",
       emailValue: "operasyon@mymiroglulojistik.com.tr",
       rights: "All rights reserved.",
-      privacy: "Privacy Policy",
+      privacy: "Privacy Policy",  
       terms: "Terms of Use",
     },
     nav: {
@@ -38,6 +42,8 @@ export const translations = {
       about: "About",
       services: "Services",
       gallery: "Gallery",
+      certificates: "Certificates",
+      contact: "Contact",
     },
     gallery: {
       title: "Gallery",
@@ -50,59 +56,73 @@ export const translations = {
       title: "Every Load, A Story",
       subtitle: "We carry that story",
       description:
-        "Timely, secure, and professional logistics services for all your shipments",
+        "Your trusted partner for reliable, secure, and professional logistics solutions that keep your business moving forward",
+      scrollDown: "Scroll Down",
+    },
+    seo: {
+      title: "MY Miroğlu Logistics | International Transportation and Logistics Services",
+      description:
+        "Turkey's trusted logistics partner. International transportation, shipping, warehousing and partial transportation services.",
+      keywords: "MY Miroğlu Logistics, Miroğlu Transportation, Miroğlu Shipping, Miroğlu Cargo, international logistics, domestic transportation, shipping solutions, İzmir logistics, İstanbul transportation, Ankara shipping, Bursa cargo",
+      author: "MY Miroğlu Logistics",
+      siteName: "MY Miroğlu Logistics",
+      locale: "en_US",
+      language: "English",
+      country: "Turkey",
+      city: "İzmir",
+      breadcrumbHome: "Home",
     },
     about: {
-      title: "Our Way, Your Future",
+      title: "Your Success, Our Mission",
       description: "About Us",
       content:
-        "Founded in 2000, MY Miroğlu International Logistics has been a symbol of trust and speed in European road transportation for more than 25 years. With our İzmir-based professional team and extensive vehicle fleet, we deliver your goods to every corner of Europe safely, quickly, and flawlessly. We know that behind every shipment lies a responsibility and a value. With this awareness, we don’t just provide logistics services; we also carry our customers’ trust and satisfaction.",
+        "Since 2000, MY Miroğlu International Logistics has been your trusted partner in European road transportation. Our İzmir-based team of professionals and extensive fleet ensure your goods reach every corner of Europe safely, quickly, and efficiently. We understand that every shipment represents your business success, and we're committed to delivering not just your cargo, but your peace of mind. Let us be the reliable partner that helps your business grow.",
     },
     services: {
-      heading: "Services",
+      heading: "Our Services",
       subheading: "Hizmetlerimiz",
       intro:
-        "With over 25 years of experience, MY Miroğlu offers the right solution for your load. From tarpaulin to refrigerated transport, express deliveries to a broad domestic & international distribution network.",
+        "With over 25 years of experience, we're here to provide the perfect logistics solution for your business needs. From temperature-controlled transport to express deliveries, we offer comprehensive domestic and international services tailored to your requirements.",
       items: {
         tenteli: {
           title: "International Tarpaulin Transport",
           description:
-            "We provide secure, flexible and economical transportation for general and large-volume cargo. We ensure timely delivery to every point in Europe with partial and full load options.",
+            "Perfect for your general and large-volume cargo needs. We offer secure, flexible, and cost-effective transportation with both partial and full load options, ensuring your goods reach every corner of Europe on time.",
         },
         frigo: {
           title: "International Reefer Transport",
           description:
-            "We ship your food, pharmaceutical and similar sensitive products fresh and safely with temperature-controlled transport. We carry out meticulous operations that preserve product integrity throughout the process.",
+            "Keep your temperature-sensitive products fresh and safe with our specialized reefer transport. Whether it's food, pharmaceuticals, or other sensitive goods, we ensure perfect temperature control and product integrity throughout the journey.",
         },
         ekspres: {
           title: "International Minivan Transport",
           description:
-            "We provide fast, flexible and door-to-door solutions for urgent and small-scale cargo. We work with express delivery focus to ensure your production and supply chain does not break down.",
+            "Need it there fast? Our minivan service delivers urgent and small-scale cargo with speed and precision. We understand that time is money, so we focus on express delivery to keep your operations running smoothly.",
         },
         karayolu: {
           title: "Domestic Road Transport",
           description:
-            "We provide cost-effective and reliable alternatives for medium-scale cargo. We offer flexible capacity and planning with our extensive network throughout Europe.",
+            "Your local logistics partner for medium-scale cargo. We provide cost-effective, reliable solutions with flexible capacity and smart planning through our extensive European network.",
         },
         minivan: {
           title: "International Minivan Transport",
           description:
-            "We provide fast, flexible and door-to-door solutions for urgent and small-scale cargo. We work with express delivery focus to ensure your production and supply chain does not break down.",
+            "Fast, flexible, and reliable - that's our minivan service promise. Perfect for urgent and small-scale cargo, we deliver door-to-door with the speed and care your business deserves.",
         },
         lorry: {
           title: "Lorry & Van International Transport",
           description:
-            "We provide cost-effective and reliable alternatives for medium-scale cargo. We offer flexible capacity and planning with our extensive network throughout Europe.",
+            "Smart solutions for medium-scale cargo needs. Our lorry and van services offer the perfect balance of cost-effectiveness and reliability, with flexible capacity and expert planning across Europe.",
         },
       },
       brokerage: {
-        heading: "We also provide brokerage services",
+        heading: "Additional Services to Support Your Business",
         customsTitle: "Customs Brokerage",
         customsDescription:
-          "Professional support for fast and smooth completion of customs procedures in your export and import processes.",
+          "Navigate customs with confidence. Our expert team handles all the paperwork and procedures, making your export and import processes smooth and stress-free.",
         insuranceTitle: "Insurance Brokerage",
         insuranceDescription:
-          "Appropriate transport insurance solutions to ensure your cargo is guaranteed under all conditions.",
+          "Protect your valuable cargo with the right insurance coverage. We help you find the perfect insurance solution that gives you peace of mind for every shipment.",
       },
     },
     stats: {
@@ -140,9 +160,9 @@ export const translations = {
       title: "Dünyayı Küçülten Çözümler",
     },
     contact: {
-      title: "Bize Ulaşın",
+      title: "İletişime Geçelim",
       subtitle:
-        "Sorularınız için bizimle iletişime geçin. Size en kısa sürede dönüş yapacağız.",
+        "Lojistik ihtiyaçlarınızı konuşmaya hazır mısınız? Sizinle tanışmak ve size en uygun çözümü sunmak için buradayız.",
       nameLabel: "Ad Soyad",
       namePlaceholder: "Adınızı ve soyadınızı girin",
       emailLabel: "E-posta",
@@ -150,16 +170,20 @@ export const translations = {
       messageLabel: "Mesajınız",
       messagePlaceholder: "Mesajınızı buraya yazın...",
       submitButton: "Gönder",
+      sending: "Gönderiliyor...",
+      headquarters: "Merkez",
+      garage: "Garaj",
+      headquartersAddress: "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
+      garageAddress: "Kemalpaşa OSB, 78. Sk. 40-78, 35730 Kemalpaşa/İzmir",
     },
     footer: {
       companyName: "MY Miroğlu Lojistik",
       companyDescription:
-        "Güvenilir ve profesyonel lojistik hizmetleri ile dünyayı küçültüyoruz. 20+ ülkede hizmet veren deneyimli ekibimizle yanınızdayız.",
+        "Küresel lojistikte güvenilir ortağınız. 20+ ülkede hizmet veren deneyimli ekibimizle, dünyayı daha yakın hale getiriyoruz.",
       quickLinks: "Hızlı Linkler",
       contactInfo: "İletişim Bilgileri",
       address: "Adres",
-      addressValue:
-        "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
+      addressValue: "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
       phone: "Telefon",
       phoneValue: "+90 532 431 19 53",
       email: "E-posta",
@@ -173,6 +197,8 @@ export const translations = {
       about: "Hakkımızda",
       services: "Hizmetlerimiz",
       gallery: "Galeri",
+      certificates: "Belgeler",
+      contact: "İletişim",
     },
     gallery: {
       title: "Galeri",
@@ -185,59 +211,73 @@ export const translations = {
       title: "HER YÜKTE BİR ANI",
       subtitle: "BİZ O ANILARI TAŞIYORUZ",
       description:
-        "Her sevkiyatınızda zamanında, güvenli ve profesyonel lojistik çözümler",
+        "İşinizi ileriye taşıyan güvenilir, güvenli ve profesyonel lojistik çözümler",
+      scrollDown: "Aşağı Kaydır",
+    },
+    seo: {
+      title: "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
+      description:
+        "Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri.",
+      keywords: "MY Miroğlu Lojistik, Miroğlu Taşımacılık, Miroğlu Nakliye, Miroğlu Kargo, uluslararası lojistik, yurtiçi taşımacılık, nakliye çözümleri, İstanbul lojistik, Ankara taşımacılık, İzmir nakliye, Bursa kargo",
+      author: "MY Miroğlu Lojistik",
+      siteName: "MY Miroğlu Lojistik",
+      locale: "tr_TR",
+      language: "Turkish",
+      country: "Türkiye",
+      city: "İzmir",
+      breadcrumbHome: "Ana Sayfa",
     },
     about: {
-      title: "Bizim Yolumuz, Sizin Geleceğiniz",
+      title: "Başarınız, Misyonumuz",
       description: "Hakkımızda",
       content:
-        "2000 yılında kurulan MY Miroğlu Uluslararası Lojistik, 25 yılı aşkın deneyimiyle Avrupa karayolu taşımacılığında güvenin ve hızın simgesi olmuştur. İzmir merkezli profesyonel ekibimiz ve geniş araç filomuzla, eşyalarınızı Avrupa’nın her noktasına güvenli, hızlı ve eksiksiz bir şekilde ulaştırıyoruz. Her yükün arkasında bir sorumluluk ve bir değer olduğunu biliyoruz. Bu bilinçle hareket ederek, sadece lojistik hizmeti sunmuyor; aynı zamanda müşterilerimizin güvenini ve memnuniyetini taşıyoruz.",
+        "2000 yılından beri MY Miroğlu Uluslararası Lojistik, Avrupa karayolu taşımacılığında güvenilir ortağınız olmuştur. İzmir merkezli profesyonel ekibimiz ve geniş araç filomuzla, eşyalarınızı Avrupa'nın her köşesine güvenli, hızlı ve verimli bir şekilde ulaştırıyoruz. Her sevkiyatın işinizin başarısını temsil ettiğini biliyoruz ve sadece kargonuzu değil, aynı zamanda huzurunuzu da teslim etmeye kararlıyız. İşinizin büyümesine yardımcı olan güvenilir ortağınız olalım.",
     },
     services: {
       heading: "Hizmetlerimiz",
       subheading: "Services",
       intro:
-        "MY Miroğlu Lojistik, 25 yılı aşkın tecrübesiyle hem yurt içi hem de uluslararası karayolu taşımacılığında yükünüze en uygun çözümleri sunar. Tenteli taşımalardan frigo lojistiğe, ekspres teslimatlardan geniş dağıtım ağına kadar her adımda güven, hız ve profesyonellik sağlıyoruz.",
+        "25 yılı aşkın deneyimimizle, işinizin ihtiyaçlarına özel mükemmel lojistik çözümler sunuyoruz. Sıcaklık kontrollü taşımacılıktan ekspres teslimatlara, kapsamlı yurt içi ve uluslararası hizmetlerimizle işinizi destekliyoruz.",
       items: {
         tenteli: {
           title: "Tenteli Yurt Dışı Taşımacılık",
           description:
-            "Genel ve büyük hacimli yükler için güvenli, esnek ve ekonomik taşımacılık sunuyoruz. Parsiyel ve komple yük seçenekleriyle Avrupa'nın her noktasına zamanında teslimat sağlarız.",
+            "Genel ve büyük hacimli yük ihtiyaçlarınız için ideal çözüm. Güvenli, esnek ve ekonomik taşımacılık sunuyoruz. Parsiyel ve komple yük seçenekleriyle eşyalarınızı Avrupa'nın her köşesine zamanında ulaştırıyoruz.",
         },
         frigo: {
           title: "Frigo Yurt Dışı Taşımacılık",
           description:
-            "Isı kontrollü taşımalarla gıda, ilaç ve benzeri hassas ürünlerinizi taze ve güvenli biçimde sevk ederiz. Süreç boyunca ürün bütünlüğünü koruyan titiz operasyon yürütürüz.",
+            "Sıcaklık hassasiyeti olan ürünlerinizi taze ve güvenli tutuyoruz. Gıda, ilaç veya diğer hassas ürünleriniz için özel frigo taşımacılığımızla mükemmel sıcaklık kontrolü ve ürün bütünlüğü sağlıyoruz.",
         },
         ekspres: {
           title: "Minivan Yurt Dışı Taşımacılık",
           description:
-            "Acil ve küçük ölçekli yükler için hızlı, esnek ve kapıdan kapıya çözümler sunarız. Üretim ve tedarik zincirinizin aksamaması için ekspres teslimat odaklı çalışırız.",
+            "Hızlı mı ihtiyacınız var? Minivan hizmetimiz acil ve küçük ölçekli yüklerinizi hız ve hassasiyetle teslim eder. Zamanın para olduğunu biliyoruz, bu yüzden operasyonlarınızın sorunsuz devam etmesi için ekspres teslimat odaklı çalışıyoruz.",
         },
         karayolu: {
           title: "Yurt İçi Karayolu",
           description:
-            "Türkiye genelinde şehirlerarası güvenli, hızlı ve profesyonel taşımacılık hizmeti veririz. Yaygın dağıtım ağımızla her noktaya etkin erişim sağlarız.",
+            "Orta ölçekli yükler için yerel lojistik ortağınız. Geniş Avrupa ağımızla esnek kapasite ve akıllı planlama sunarak maliyet etkin, güvenilir çözümler sağlıyoruz.",
         },
         minivan: {
           title: "Minivan Yurt Dışı Taşımacılık",
           description:
-            "Acil ve küçük ölçekli yükler için hızlı, esnek ve kapıdan kapıya çözümler sunarız. Üretim ve tedarik zincirinizin aksamaması için ekspres teslimat odaklı çalışırız.",
+            "Hızlı, esnek ve güvenilir - minivan hizmetimizin sözü. Acil ve küçük ölçekli yükler için mükemmel, işinizin hak ettiği hız ve özenle kapıdan kapıya teslimat yapıyoruz.",
         },
         lorry: {
           title: "Lorry & Kamyonet Yurt Dışı Taşımacılık",
           description:
-            "Orta ölçekli yükler için uygun maliyetli ve güvenilir alternatifler sağlarız. Avrupa genelinde yaygın ağımızla esnek kapasite ve planlama sunarız.",
+            "Orta ölçekli yük ihtiyaçları için akıllı çözümler. Lorry ve kamyonet hizmetlerimiz maliyet etkinlik ve güvenilirlik arasında mükemmel denge sunar, Avrupa genelinde esnek kapasite ve uzman planlama ile.",
         },
       },
       brokerage: {
-        heading: "Ayrıca size aracılık hizmetleri de sunuyoruz",
+        heading: "İşinizi Destekleyen Ek Hizmetler",
         customsTitle: "Gümrük Aracılığı",
         customsDescription:
-          "İhracat ve ithalat süreçlerinizde gümrük işlemlerinin hızlı ve sorunsuz tamamlanması için profesyonel destek.",
+          "Gümrük işlemlerinde güvenle ilerleyin. Uzman ekibimiz tüm evrak işlerini ve prosedürleri halleder, ihracat ve ithalat süreçlerinizi sorunsuz ve stressiz hale getirir.",
         insuranceTitle: "Sigorta Aracılığı",
         insuranceDescription:
-          "Yüklerinizin her koşulda güvence altında olması için uygun taşımacılık sigortası çözümleri.",
+          "Değerli kargonuzu doğru sigorta kapsamıyla koruyun. Her sevkiyat için huzur veren mükemmel sigorta çözümünü bulmanıza yardımcı oluyoruz.",
       },
     },
     stats: {

@@ -56,12 +56,6 @@ export default function ContactSection() {
       ref={sectionRef}
       className="relative w-full py-16 md:py-24 overflow-hidden"
     >
-      {/* Decorative background */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-[#692433]/10 blur-3xl" />
-        <div className="absolute -bottom-40 -right-40 w-[28rem] h-[28rem] rounded-full bg-[#1f222a]/10 blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50rem] h-[50rem] rounded-full border border-black/5" />
-      </div>
 
       <div className="relative max-w-6xl mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -81,7 +75,7 @@ export default function ContactSection() {
               {t.contact?.subtitle ||
                 "Sorularınız için bizimle iletişime geçin. Size en kısa sürede dönüş yapacağız."}
             </p>
-            {/* Contact info cards: email + phone + address stacked */}
+            {/* Contact info cards: email + phone + addresses stacked */}
             <div
               className={`mt-8 grid grid-cols-1 gap-4 transition-all duration-1000 ${
                 hasIntersected
@@ -119,11 +113,25 @@ export default function ContactSection() {
                 className="rounded-xl border border-gray-200 bg-white/60 backdrop-blur px-5 py-4 hover:bg-white/80 transition-colors cursor-pointer"
               >
                 <div className="text-xs uppercase tracking-wide text-gray-500">
-                  {t.footer?.address || "Address"}
+                  {t.contact?.headquarters || "Merkez"}
                 </div>
                 <div className="mt-1 font-semibold text-gray-900 text-sm">
-                  {t.footer?.addressValue ||
+                  {t.contact?.headquartersAddress ||
                     "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir."}
+                </div>
+              </a>
+              <a
+                href="https://maps.google.com/?q=38.4683558,27.3460701"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-gray-200 bg-white/60 backdrop-blur px-5 py-4 hover:bg-white/80 transition-colors cursor-pointer"
+              >
+                <div className="text-xs uppercase tracking-wide text-gray-500">
+                  {t.contact?.garage || "Garaj"}
+                </div>
+                <div className="mt-1 font-semibold text-gray-900 text-sm">
+                  {t.contact?.garageAddress ||
+                    "Kemalpaşa OSB, 78. Sk. 40-78, 35730 Kemalpaşa/İzmir"}
                 </div>
               </a>
             </div>
@@ -131,7 +139,7 @@ export default function ContactSection() {
 
           {/* Right side - Form */}
           <div
-            className={`rounded-2xl border border-gray-200 bg-white/70 backdrop-blur p-6 md:p-8 shadow-xl transition-all duration-1000 ${
+            className={`rounded-2xl border border-gray-200 bg-white/70 backdrop-blur p-6 md:p-8 shadow-xl transition-all duration-1000 my-auto ${
               hasIntersected
                 ? "animate-fade-in-right opacity-100"
                 : "opacity-0 translate-x-8"

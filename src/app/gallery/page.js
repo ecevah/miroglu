@@ -7,37 +7,51 @@ import { useI18n } from "@/i18n/I18nProvider";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
-const images = [
-  {
-    src: "/public/images/Scania-with-Trailer.jpg",
-    w: 1600,
-    h: 1067,
-    tag: "travel",
-  },
-  {
-    src: "/public/images/Mercedes-with-Text.png",
-    w: 1600,
-    h: 900,
-    tag: "corporate",
-  },
-  { src: "/public/images/Scania.jpg", w: 1400, h: 933, tag: "travel" },
-  { src: "/public/images/Mercedes.png", w: 1600, h: 900, tag: "expedition" },
-  { src: "/public/images/Plane.png", w: 1200, h: 800, tag: "drone" },
-  {
-    src: "/public/images/Scania-with-Trailer.jpg",
-    w: 1600,
-    h: 900,
-    tag: "corporate",
-  },
-  { src: "/public/images/Mercedes.png", w: 1600, h: 1000, tag: "travel" },
-];
+// Dinamik galeri resimleri yükleme fonksiyonu
+const loadGalleryImages = async () => {
+  try {
+    const response = await fetch('/api/gallery');
+    if (!response.ok) {
+      throw new Error('Galeri resimleri yüklenemedi');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Galeri resimleri yüklenirken hata:', error);
+    // Fallback olarak statik liste
+    return [
+      { src: "/gallery/my-miroglu-galeri10.jpg", w: 1600, h: 1200, tag: "fleet", id: 0 },
+      { src: "/gallery/my-miroglu-galeri9.jpg", w: 1600, h: 1200, tag: "fleet", id: 1 },
+      { src: "/gallery/my-miroglu-galeri8.jpg", w: 1600, h: 1200, tag: "fleet", id: 2 },
+      { src: "/gallery/my-miroglu-galeri7.jpg", w: 1600, h: 1200, tag: "fleet", id: 3 },
+      { src: "/gallery/my-miroglu-galeri6.jpg", w: 1600, h: 1200, tag: "fleet", id: 4 },
+      { src: "/gallery/my-miroglu-galeri5.jpg", w: 1600, h: 1200, tag: "fleet", id: 5 },
+      { src: "/gallery/my-miroglu-galeri4.jpg", w: 1600, h: 1200, tag: "fleet", id: 6 },
+      { src: "/gallery/my-miroglu-galeri3.jpg", w: 1600, h: 1200, tag: "fleet", id: 7 },
+      { src: "/gallery/my-miroglu-galeri2.jpg", w: 1600, h: 1200, tag: "fleet", id: 8 },
+      { src: "/gallery/my-miroglu-galer1.jpg", w: 1600, h: 1200, tag: "fleet", id: 9 }
+    ];
+  }
+};
 
 export default function GalleryPage() {
   const { t } = useI18n();
   const [active, setActive] = useState(null); // index or null
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
   const overlayRef = useRef(null);
   const [heroRef, , heroIntersected] = useIntersectionObserver();
   const [galleryRef, , galleryIntersected] = useIntersectionObserver();
+
+  // Component mount olduğunda resimleri yükle
+  useEffect(() => {
+    const loadImages = async () => {
+      setLoading(true);
+      const loadedImages = await loadGalleryImages();
+      setImages(loadedImages);
+      setLoading(false);
+    };
+    loadImages();
+  }, []);
 
   const close = useCallback(() => setActive(null), []);
   const showPrev = useCallback(() => {
@@ -88,15 +102,23 @@ export default function GalleryPage() {
 
         <section ref={galleryRef} className="pb-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <div className="masonry">
-              {images.map((img, idx) => (
+            {loading ? (
+              <div className="flex items-center justify-center py-20">
+                <div className="text-center">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#692433] mx-auto mb-4"></div>
+                  <p className="text-gray-600">Galeri yükleniyor...</p>
+                </div>
+              </div>
+            ) : (
+              <div className="masonry">
+                {images.map((img, idx) => (
                 <button
                   key={idx}
                   type="button"
                   className={`masonry-item group relative w-full overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm hover:shadow-md transition-all scroll-animate-zoom scroll-delay-${Math.min(
                     idx + 1,
                     4
-                  )} ${galleryIntersected ? "animate-in" : ""}`}
+                  )} ${galleryIntersected ? "animate-in" : ""} cursor-pointer`}
                   onClick={() => setActive(idx)}
                 >
                   <Image
@@ -110,7 +132,8 @@ export default function GalleryPage() {
                   />
                 </button>
               ))}
-            </div>
+              </div>
+            )}
           </div>
         </section>
       </main>
@@ -119,7 +142,7 @@ export default function GalleryPage() {
       {active !== null ? (
         <div
           ref={overlayRef}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
           onClick={(e) => {
             if (e.target === overlayRef.current) close();
           }}
@@ -127,7 +150,7 @@ export default function GalleryPage() {
           <div className="absolute top-4 right-4 flex items-center gap-2">
             <button
               aria-label="Kapat"
-              className="rounded-full bg-white/90 hover:bg-white px-3 py-2 text-black shadow"
+              className="rounded-full bg-white/90 hover:bg-white px-3 py-2 text-black shadow cursor-pointer"
               onClick={close}
             >
               ✕
@@ -135,25 +158,25 @@ export default function GalleryPage() {
           </div>
           <button
             aria-label="Önceki"
-            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 hover:bg-white p-3 text-black shadow"
+            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 hover:bg-white p-3 text-black shadow cursor-pointer"
             onClick={showPrev}
           >
             ‹
           </button>
-          <figure className="mx-4 max-h-[85vh] w-full max-w-5xl">
+          <figure className="w-full h-full flex items-center justify-center">
             <Image
               src={images[active].src.replace("/public", "")}
               alt="Selected image"
               width={images[active].w}
               height={images[active].h}
-              className="h-full w-full object-contain animate-zoom-in-like"
+              className="max-h-[85vh] max-w-[90vw] object-contain animate-zoom-in-like"
               sizes="100vw"
               priority
             />
           </figure>
           <button
             aria-label="Sonraki"
-            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 hover:bg-white p-3 text-black shadow"
+            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 hover:bg-white p-3 text-black shadow cursor-pointer"
             onClick={showNext}
           >
             ›

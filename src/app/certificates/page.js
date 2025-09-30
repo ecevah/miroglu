@@ -20,6 +20,11 @@ const items = [
     logo: "/certs/logo/und.png",
     pdf: null,
   },
+  {
+    title: "TOBB Üyeliği",
+    logo: "/certs/logo/tobb.png",
+    pdf: null,
+  },
 ];
 
 export default function CertificatesPage() {
