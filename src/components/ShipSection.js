@@ -234,11 +234,11 @@ const ShipSection = () => {
                 style={{ animationDelay: "0.3s" }}
               >
                 <h3 className="uppercase text-[#1f3447] font-black tracking-tight text-xl md:text-2xl lg:text-3xl leading-tight">
-                  {t.services?.items?.minivan?.title ?? "Minivan Taşımacılık"}
+                  {t.services?.items?.lorry?.title ?? "Lorry Taşımacılık"}
                 </h3>
                 <p className="mt-2 text-[#1f3447]/80 text-sm md:text-base leading-6 max-w-xs mx-auto md:mx-0 md:ml-auto">
-                  {t.services?.items?.minivan?.description ??
-                    "Acil ve küçük ölçekli yükler için hızlı ve esnek çözümler."}
+                  {t.services?.items?.lorry?.description ??
+                    "Orta ölçekli yükler için uygun maliyetli ve güvenilir alternatifler."}
                 </p>
               </div>
             </div>
@@ -298,22 +298,6 @@ const ShipSection = () => {
                 <p className="mt-2 text-[#1f3447]/80 text-sm md:text-base leading-6 max-w-xs mx-auto md:mx-0">
                   {t.services?.items?.karayolu?.description ??
                     "Türkiye genelinde ve Avrupa'nın her noktasına yaygın dağıtım ağıyla profesyonel taşımacılık."}
-                </p>
-              </div>
-              <div
-                className={`text-center md:text-left transition-all duration-1000 ${
-                  hasIntersected
-                    ? "animate-fade-in-right opacity-100"
-                    : "opacity-0 translate-x-8"
-                }`}
-                style={{ animationDelay: "0.3s" }}
-              >
-                <h3 className="uppercase text-[#1f3447] font-black tracking-tight text-xl md:text-2xl lg:text-3xl leading-tight">
-                  {t.services?.items?.lorry?.title ?? "Lorry Taşımacılık"}
-                </h3>
-                <p className="mt-2 text-[#1f3447]/80 text-sm md:text-base leading-6 max-w-xs mx-auto md:mx-0">
-                  {t.services?.items?.lorry?.description ??
-                    "Orta ölçekli yükler için uygun maliyetli ve güvenilir alternatifler."}
                 </p>
               </div>
             </div>
