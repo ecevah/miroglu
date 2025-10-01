@@ -385,13 +385,50 @@ body {
 /* Mobile overscroll area fixes - prevent blue areas */
 @media (max-width: 768px) {
   html, body {
-    /* Prevent all overscroll behaviors that show blue areas */
+    overscroll-behavior: none;
+  }
+  
+  /* Mobile gallery improvements */
+  .masonry {
+    column-gap: 12px;
+  }
+  
+  .masonry-item {
+    margin-bottom: 12px;
+    will-change: opacity, transform;
+    /* Başlangıçta görünür olacak şekilde */
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    /* Safari için ekstra güvenlik */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  /* Ensure images are always visible on mobile */
+  .masonry-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* Safari için ekstra güvenlik */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  /* Safari için animasyon düzeltmeleri */
+  .masonry-item {
+    -webkit-transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  
+  /* Prevent all overscroll behaviors that show blue areas */
+  html, body {
     overscroll-behavior: none;
     overscroll-behavior-y: none;
     overscroll-behavior-x: none;
     /* Force white background on overscroll */
     background: #FFFFFF !important;
-    background-color: #FFFFFF !important;
   }
   
   /* iOS Safari specific fixes */
@@ -401,6 +438,29 @@ body {
       -webkit-overflow-scrolling: touch;
       overscroll-behavior: none;
       background: #FFFFFF !important;
+    }
+    
+    /* Safari galeri düzeltmeleri */
+    .masonry-item {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-perspective: 1000;
+      perspective: 1000;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    
+    /* Safari'de animasyonların düzgün çalışması için */
+    .masonry-item.opacity-100 {
+      opacity: 1 !important;
+      -webkit-transform: translate3d(0, 0, 0) scale(1) !important;
+      transform: translate3d(0, 0, 0) scale(1) !important;
+    }
+    
+    .masonry-item.opacity-0 {
+      opacity: 0 !important;
+      -webkit-transform: translate3d(0, 4px, 0) scale(0.95) !important;
+      transform: translate3d(0, 4px, 0) scale(0.95) !important;
     }
   }
   

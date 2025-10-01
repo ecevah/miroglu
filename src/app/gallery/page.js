@@ -38,9 +38,13 @@ export default function GalleryPage() {
   const [active, setActive] = useState(null); // index or null
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [galleryVisible, setGalleryVisible] = useState(true);
   const overlayRef = useRef(null);
   const [heroRef, , heroIntersected] = useIntersectionObserver();
-  const [galleryRef, , galleryIntersected] = useIntersectionObserver();
+  const [galleryRef, , galleryIntersected] = useIntersectionObserver({
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  });
 
   // Component mount olduğunda resimleri yükle
   useEffect(() => {
@@ -52,6 +56,13 @@ export default function GalleryPage() {
     };
     loadImages();
   }, []);
+
+  // Galeri animasyonu - sadece gelme animasyonu
+  useEffect(() => {
+    if (galleryIntersected) {
+      setGalleryVisible(true);
+    }
+  }, [galleryIntersected]);
 
   const close = useCallback(() => setActive(null), []);
   const showPrev = useCallback(() => {
@@ -115,10 +126,14 @@ export default function GalleryPage() {
                 <button
                   key={idx}
                   type="button"
-                  className={`masonry-item group relative w-full overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm hover:shadow-md transition-all scroll-animate-zoom scroll-delay-${Math.min(
-                    idx + 1,
-                    4
-                  )} ${galleryIntersected ? "animate-in" : ""} cursor-pointer`}
+                  className={`masonry-item group relative w-full overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm hover:shadow-md transition-all duration-700 ease-out ${
+                    galleryVisible 
+                      ? "animate-fade-in-scale" 
+                      : ""
+                  } cursor-pointer`}
+                  style={{
+                    transitionDelay: `${Math.min(idx, 5) * 0.15}s`
+                  }}
                   onClick={() => setActive(idx)}
                 >
                   <Image
@@ -169,7 +184,7 @@ export default function GalleryPage() {
               alt="Selected image"
               width={images[active].w}
               height={images[active].h}
-              className="max-h-[85vh] max-w-[90vw] object-contain animate-zoom-in-like"
+              className="max-h-[85vh] max-w-[90vw] object-contain transition-all duration-300 ease-out hover:scale-105"
               sizes="100vw"
               priority
             />
