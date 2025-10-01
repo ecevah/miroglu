@@ -87,13 +87,15 @@ export default function Home() {
         {/* Google Search Console & Analytics */}
         <meta
           name="google-site-verification"
-          content="your-google-verification-code"
+          content="Dk3qEBYiuIxHaHT6kOCjAVso-MRUwj41jCzZWWcXn1U"
         />
+        {/*
         <meta name="msvalidate.01" content="your-bing-verification-code" />
         <meta
           name="yandex-verification"
           content="your-yandex-verification-code"
         />
+        */}
 
         {/* Additional SEO Meta Tags */}
         <meta name="format-detection" content="telephone=no" />
@@ -104,7 +106,7 @@ export default function Home() {
 
         {/* Rich Snippets */}
         <meta name="application-name" content={t.seo?.siteName || "MY Miroğlu Lojistik"} />
-        <meta name="msapplication-TileColor" content="#1e40af" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
 
         {/* Language and Content */}
@@ -117,16 +119,18 @@ export default function Home() {
         {/* Social Media Additional */}
         <meta property="og:updated_time" content="2024-01-15T10:00:00+00:00" />
         <meta property="article:author" content="MY Miroğlu Lojistik" />
+        {/*
         <meta
           property="article:publisher"
-          content="https://www.facebook.com/miroglulojistik"
+          content="https://www.facebook.com/mymiroglulojistik"
         />
-
+        */}
         {/* Twitter Additional */}
+        {/*
         <meta name="twitter:site" content="@miroglulojistik" />
         <meta name="twitter:creator" content="@miroglulojistik" />
         <meta name="twitter:domain" content="www.mymiroglulojistik.com.tr" />
-
+        */}
         {/* Mobile Optimization */}
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="HandheldFriendly" content="True" />
@@ -165,9 +169,11 @@ export default function Home() {
                   addressCountry: "TR",
                 },
                 sameAs: [
+                  {/*
                   "https://www.facebook.com/miroglulojistik",
                   "https://www.instagram.com/miroglulojistik",
                   "https://www.linkedin.com/company/miroglulojistik",
+                  */}
                 ],
               },
               breadcrumb: {
@@ -188,7 +194,7 @@ export default function Home() {
 
       {/* Google Analytics & Search Console */}
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        src="https://www.googletagmanager.com/gtag/js?id=G-W94KFCQRKQ"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -196,7 +202,7 @@ export default function Home() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'GA_MEASUREMENT_ID', {
+          gtag('config', 'G-W94KFCQRKQ', {
             page_title: '${t.seo?.title || "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri"}',
             page_location: 'https://www.mymiroglulojistik.com.tr',
             custom_map: {
