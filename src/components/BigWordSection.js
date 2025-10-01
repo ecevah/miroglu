@@ -28,17 +28,21 @@ export default function BigWordSection() {
           priority
         />
         {/* Plane overlay aligned to the same container width */}
-        <img
+        <Image
           src="/images/Plane.png"
           alt="Plane fly-through"
+          width={520}
+          height={300}
           className={`pointer-events-none select-none absolute top-[67%] left-0 -translate-y-[20%] w-[36vw] max-w-[520px] min-w-[240px] h-auto object-contain ${
             isIntersecting ? "animate-plane-sweep" : "opacity-0"
           }`}
         />
         {/* Car overlay - starts after plane animation */}
-        <img
+        <Image
           src="/images/Race-Car.png"
           alt="Race car drive-through"
+          width={480}
+          height={300}
           className={`pointer-events-none select-none absolute -bottom-[30%] right-0 w-[32vw] max-w-[480px] min-w-[200px] h-auto object-contain ${
             isIntersecting ? "animate-car-sweep" : "opacity-0"
           }`}

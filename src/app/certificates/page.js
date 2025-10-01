@@ -73,7 +73,7 @@ export default function CertificatesPage() {
                       rel="noopener noreferrer"
                       className="mt-3 inline-flex items-center rounded-full bg-[#1f222a] text-white px-4 py-2 text-sm font-semibold shadow-sm hover:bg-black/90 transition-colors"
                     >
-                      PDF'i Görüntüle
+                      PDF&apos;i Görüntüle
                     </a>
                   ) : null}
                 </div>

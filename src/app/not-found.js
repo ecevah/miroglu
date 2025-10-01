@@ -1,3 +1,6 @@
+import Link from "next/link";
+import Image from "next/image";
+
 export default function NotFound() {
   return (
     <div
@@ -7,7 +10,7 @@ export default function NotFound() {
         backgroundColor: "#f39c11",
       }}
     >
-      <a
+      <Link
         href="/"
         style={{
           position: "fixed",
@@ -18,12 +21,14 @@ export default function NotFound() {
         }}
         aria-label="Home"
       >
-        <img
+        <Image
           src="/logo/logo.svg"
           alt="Logo"
+          width={100}
+          height={100}
           style={{ height: "clamp(40px, 10vw, 100px)", width: "auto" }}
         />
-      </a>
+      </Link>
 
       <div
         style={{
@@ -46,9 +51,11 @@ export default function NotFound() {
             gap: "clamp(16px, 4vw, 28px)",
           }}
         >
-          <img
+          <Image
             src="/images/404.jpg"
             alt="404 - Page not found"
+            width={800}
+            height={600}
             style={{
               width: "min(92vw, 800px)",
               height: "auto",
@@ -56,7 +63,7 @@ export default function NotFound() {
               objectFit: "contain",
             }}
           />
-          <a
+          <Link
             href="/"
             style={{
               display: "inline-block",
@@ -73,7 +80,7 @@ export default function NotFound() {
             aria-label="Go to homepage"
           >
             Ana sayfaya dön
-          </a>
+          </Link>
         </div>
       </div>
     </div>

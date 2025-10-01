@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { RxHamburgerMenu, RxCaretDown } from "react-icons/rx";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -71,7 +72,7 @@ export default function Header() {
       <header className="fixed top-4 left-0 right-0 z-50">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
           <div className="flex items-center justify-between rounded-2xl px-4 md:px-6 py-3 bg-transparent">
-            <a href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
               <Image
                 src="/logo/logo.svg"
                 alt="Miroğlu Logistics"
@@ -80,31 +81,31 @@ export default function Header() {
                 style={{ width: "auto", height: "auto" }}
                 priority
               />
-            </a>
+            </Link>
             <nav className="hidden md:flex items-center gap-7">
-              <a href="/#home" className="relative py-1 text-sm font-medium text-black/80 hover:text-black transition-colors">
+              <Link href="/#home" className="relative py-1 text-sm font-medium text-black/80 hover:text-black transition-colors">
                 Ana Sayfa
-              </a>
-              <a href="/#about" className="relative py-1 text-sm font-medium text-black/80 hover:text-black transition-colors">
+              </Link>
+              <Link href="/#about" className="relative py-1 text-sm font-medium text-black/80 hover:text-black transition-colors">
                 Hakkımızda
-              </a>
-              <a href="/#services" className="relative py-1 text-sm font-medium text-black/80 hover:text-black transition-colors">
+              </Link>
+              <Link href="/#services" className="relative py-1 text-sm font-medium text-black/80 hover:text-black transition-colors">
                 Hizmetlerimiz
-              </a>
-              <a href="/gallery" className="relative py-1 text-sm font-medium text-black/80 hover:text-black transition-colors">
+              </Link>
+              <Link href="/gallery" className="relative py-1 text-sm font-medium text-black/80 hover:text-black transition-colors">
                 Galeri
-              </a>
-              <a href="/certificates" className="relative py-1 text-sm font-medium text-black/80 hover:text-black transition-colors">
+              </Link>
+              <Link href="/certificates" className="relative py-1 text-sm font-medium text-black/80 hover:text-black transition-colors">
                 Belgeler
-              </a>
+              </Link>
             </nav>
             <div className="hidden md:flex items-center gap-3">
               <div className="inline-flex items-center gap-1 text-sm font-medium text-black/80 hover:text-black cursor-pointer">
                 TR
               </div>
-              <a href="/#contact" className="inline-flex items-center rounded-full bg-[#1f222a] text-white px-5 py-2 text-sm font-semibold shadow-sm hover:bg-black/90 transition-colors text-center">
+              <Link href="/#contact" className="inline-flex items-center rounded-full bg-[#1f222a] text-white px-5 py-2 text-sm font-semibold shadow-sm hover:bg-black/90 transition-colors text-center">
                 Bize Ulaşın
-              </a>
+              </Link>
             </div>
             <button
               type="button"
@@ -128,7 +129,7 @@ export default function Header() {
           }`}
         >
           {/* Left: Logo */}
-          <a href="/" className="flex items-center gap-3 animate-fade-down">
+          <Link href="/" className="flex items-center gap-3 animate-fade-down">
             <Image
               src="/logo/logo.svg"
               alt="Miroğlu Logistics"
@@ -137,25 +138,25 @@ export default function Header() {
               style={{ width: "auto", height: "auto" }}
               priority
             />
-          </a>
+          </Link>
 
           {/* Desktop center nav */}
           <nav className="hidden md:flex items-center gap-7 animate-fade-up animate-delay-1">
-            <a href="/#home" className={linkClass}>
+            <Link href="/#home" className={linkClass}>
               {t.nav.home}
-            </a>
-            <a href="/#about" className={linkClass}>
+            </Link>
+            <Link href="/#about" className={linkClass}>
               {t.nav.about}
-            </a>
-            <a href="/#services" className={linkClass}>
+            </Link>
+            <Link href="/#services" className={linkClass}>
               {t.nav.services}
-            </a>
-            <a href="/gallery" className={linkClass}>
+            </Link>
+            <Link href="/gallery" className={linkClass}>
               {t.nav.gallery}
-            </a>
-            <a href="/certificates" className={linkClass}>
+            </Link>
+            <Link href="/certificates" className={linkClass}>
               {t.nav.certificates}
-            </a>
+            </Link>
           </nav>
 
           {/* Desktop right actions */}
@@ -197,9 +198,9 @@ export default function Header() {
                 </div>
               ) : null}
             </div>
-            <a href="/#contact" className={btnPrimary}>
+            <Link href="/#contact" className={btnPrimary}>
               {t.cta.contact}
-            </a>
+            </Link>
           </div>
 
           {/* Mobile hamburger */}
@@ -231,14 +232,14 @@ export default function Header() {
         } md:hidden fixed right-0 top-0 h-full w-[88vw] max-w-sm z-[60] bg-gradient-to-b from-white to-[#ecf2f6] shadow-2xl transition-transform duration-300 flex flex-col`}
       >
         <div className="flex items-center justify-between px-6 py-4 border-b border-black/10 bg-white/70 backdrop-blur">
-          <a href="/">
+          <Link href="/">
             <Image
               src="/logo/logo.svg"
               alt="Miroğlu Logistics"
               width={150}
               height={38}
             />
-          </a>
+          </Link>
           <button
             type="button"
             aria-label="Menüyü kapat"
@@ -249,48 +250,48 @@ export default function Header() {
           </button>
         </div>
         <nav className="flex flex-col gap-1 px-6 py-4 text-base flex-1 overflow-y-auto">
-          <a
+          <Link
             href="/#home"
             className="rounded-lg px-3 py-2 hover:bg-black/[0.04]"
             onClick={() => setIsMenuOpen(false)}
           >
             {t.nav.home}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#about"
             className="rounded-lg px-3 py-2 hover:bg-black/[0.04]"
             onClick={() => setIsMenuOpen(false)}
           >
             {t.nav.about}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#services"
             className="rounded-lg px-3 py-2 hover:bg-black/[0.04]"
             onClick={() => setIsMenuOpen(false)}
           >
             {t.nav.services}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#contact"
             className="rounded-lg px-3 py-2 hover:bg-black/[0.04]"
             onClick={() => setIsMenuOpen(false)}
           >
             {t.nav.contact}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/gallery"
             className="rounded-lg px-3 py-2 hover:bg-black/[0.04]"
             onClick={() => setIsMenuOpen(false)}
           >
             {t.nav.gallery}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/certificates"
             className="rounded-lg px-3 py-2 hover:bg-black/[0.04]"
             onClick={() => setIsMenuOpen(false)}
           >
             {t.nav.certificates}
-          </a>
+          </Link>
         </nav>
         <div className="mt-auto px-6 py-4 border-t border-black/10 bg-white/60 backdrop-blur">
           <div className="flex items-center justify-between gap-3">
@@ -331,9 +332,9 @@ export default function Header() {
                 </div>
               ) : null}
             </div>
-            <a href="/#contact" className={btnPrimary}>
+            <Link href="/#contact" className={btnPrimary}>
               {t.cta.contact}
-            </a>
+            </Link>
           </div>
         </div>
       </aside>

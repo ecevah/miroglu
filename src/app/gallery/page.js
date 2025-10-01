@@ -57,11 +57,11 @@ export default function GalleryPage() {
   const showPrev = useCallback(() => {
     if (active === null) return;
     setActive((i) => (i === 0 ? images.length - 1 : (i || 0) - 1));
-  }, [active]);
+  }, [active, images.length]);
   const showNext = useCallback(() => {
     if (active === null) return;
     setActive((i) => (i === images.length - 1 ? 0 : (i || 0) + 1));
-  }, [active]);
+  }, [active, images.length]);
 
   useEffect(() => {
     function onKey(e) {

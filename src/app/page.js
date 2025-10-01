@@ -1,6 +1,7 @@
 "use client";
 
 import Head from "next/head";
+import Script from "next/script";
 import { useI18n } from "@/i18n/I18nProvider";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
@@ -135,28 +136,6 @@ export default function Home() {
         <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
         <meta httpEquiv="Expires" content="31536000" />
 
-        {/* Google Analytics & Search Console */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'GA_MEASUREMENT_ID', {
-                page_title: '${t.seo?.title || "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri"}',
-                page_location: 'https://www.mymiroglulojistik.com.tr',
-                custom_map: {
-                  'custom_parameter_1': 'logistics_company',
-                  'custom_parameter_2': 'transportation_services'
-                }
-              });
-            `,
-          }}
-        />
 
         {/* Google Search Console Structured Data */}
         <script
@@ -206,6 +185,27 @@ export default function Home() {
           }}
         />
       </Head>
+
+      {/* Google Analytics & Search Console */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: '${t.seo?.title || "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri"}',
+            page_location: 'https://www.mymiroglulojistik.com.tr',
+            custom_map: {
+              'custom_parameter_1': 'logistics_company',
+              'custom_parameter_2': 'transportation_services'
+            }
+          });
+        `}
+      </Script>
 
       <Header />
       <section id="home">

@@ -23,7 +23,7 @@ export function I18nProvider({ children }) {
     } else if (typeof document !== "undefined") {
       document.documentElement.lang = lang;
     }
-  }, []);
+  }, [lang]);
 
   useEffect(() => {
     if (mounted && typeof window !== "undefined") localStorage.setItem("lang", lang);

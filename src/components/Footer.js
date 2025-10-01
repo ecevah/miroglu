@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useI18n } from "@/i18n/I18nProvider";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { useState, useEffect } from "react";
@@ -17,7 +19,7 @@ function FooterCopyright({ t, isClient, isSafari }) {
   if (!isClient) {
     return (
       <p className="text-sm text-gray-500 mb-4 md:mb-0">
-        © 2024 MY Miroğlu Lojistik. Tüm hakları saklıdır.
+        © 2025 MY Miroğlu Lojistik. Tüm hakları saklıdır.
       </p>
     );
   }
@@ -56,9 +58,11 @@ export default function Footer() {
             <div className="md:col-span-2">
               <div className="mb-4">
                 <div className="flex items-center mb-4">
-                  <img
+                  <Image
                     src="/logo/logo.svg"
                     alt="MY Miroğlu Lojistik"
+                    width={80}
+                    height={20}
                     className="h-20 w-auto mr-3"
                   />
                 </div>
@@ -72,11 +76,11 @@ export default function Footer() {
                 Hızlı Linkler
               </h4>
               <ul className="space-y-2">
-                <li><a href="/#home" className="text-gray-600 hover:text-[#692433] transition-colors">Ana Sayfa</a></li>
-                <li><a href="/#about" className="text-gray-600 hover:text-[#692433] transition-colors">Hakkımızda</a></li>
-                <li><a href="/#services" className="text-gray-600 hover:text-[#692433] transition-colors">Hizmetlerimiz</a></li>
-                <li><a href="/gallery" className="text-gray-600 hover:text-[#692433] transition-colors">Galeri</a></li>
-                <li><a href="/certificates" className="text-gray-600 hover:text-[#692433] transition-colors">Belgeler</a></li>
+                <li><Link href="/#home" className="text-gray-600 hover:text-[#692433] transition-colors">Ana Sayfa</Link></li>
+                <li><Link href="/#about" className="text-gray-600 hover:text-[#692433] transition-colors">Hakkımızda</Link></li>
+                <li><Link href="/#services" className="text-gray-600 hover:text-[#692433] transition-colors">Hizmetlerimiz</Link></li>
+                <li><Link href="/gallery" className="text-gray-600 hover:text-[#692433] transition-colors">Galeri</Link></li>
+                <li><Link href="/certificates" className="text-gray-600 hover:text-[#692433] transition-colors">Belgeler</Link></li>
               </ul>
             </div>
             <div>
@@ -103,12 +107,12 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row justify-between items-center">
               <FooterCopyright t={t} isClient={isClient} isSafari={isSafari} />
               <div className="flex space-x-6">
-                <a href="/privacy" className="text-sm text-gray-500 hover:text-[#692433] transition-colors">
+                <Link href="/privacy" className="text-sm text-gray-500 hover:text-[#692433] transition-colors">
                   Gizlilik Politikası
-                </a>
-                <a href="/terms" className="text-sm text-gray-500 hover:text-[#692433] transition-colors">
+                </Link>
+                <Link href="/terms" className="text-sm text-gray-500 hover:text-[#692433] transition-colors">
                   Kullanım Şartları
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -132,9 +136,11 @@ export default function Footer() {
           >
             <div className="mb-4">
               <div className="flex items-center mb-4">
-                <img
+                <Image
                   src="/logo/logo.svg"
                   alt="MY Miroğlu Lojistik"
+                  width={80}
+                  height={20}
                   className="h-20 w-auto mr-3"
                 />
               </div>
@@ -159,44 +165,44 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a
+                <Link
                   href="/#home"
                   className="text-gray-600 hover:text-[#692433] transition-colors"
                 >
                   {t?.nav?.home || "Ana Sayfa"}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#about"
                   className="text-gray-600 hover:text-[#692433] transition-colors"
                 >
                   {t?.nav?.about || "Hakkımızda"}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#services"
                   className="text-gray-600 hover:text-[#692433] transition-colors"
                 >
                   {t?.nav?.services || "Hizmetlerimiz"}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/gallery"
                   className="text-gray-600 hover:text-[#692433] transition-colors"
                 >
                   {t?.nav?.gallery || "Galeri"}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/certificates"
                   className="text-gray-600 hover:text-[#692433] transition-colors"
                 >
                   {t?.nav?.certificates || "Belgeler"}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -251,18 +257,18 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <FooterCopyright t={t} isClient={isClient} isSafari={isSafari} />
             <div className="flex space-x-6">
-              <a
+              <Link
                 href="/privacy"
                 className="text-sm text-gray-500 hover:text-[#692433] transition-colors"
               >
                 {t?.footer?.privacy || "Gizlilik Politikası"}
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/terms"
                 className="text-sm text-gray-500 hover:text-[#692433] transition-colors"
               >
                 {t?.footer?.terms || "Kullanım Şartları"}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
