@@ -18,23 +18,25 @@ export const translations = {
       sending: "Sending...",
       headquarters: "Headquarters",
       garage: "Garage",
-      headquartersAddress: "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
+      headquartersAddress:
+        "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
       garageAddress: "Kemalpaşa OSB, 78. Sk. 40-78, 35730 Kemalpaşa/İzmir",
     },
     footer: {
-      companyName: "MY Miroğlu Logistics",
+      companyName: "My Miroğlu Logistics",
       companyDescription:
         "Your trusted partner in global logistics. We bring the world closer with our reliable, professional services and experienced team serving across 20+ countries.",
       quickLinks: "Quick Links",
       contactInfo: "Contact Information",
       address: "Address",
-      addressValue: "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
+      addressValue:
+        "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
       phone: "Phone",
       phoneValue: "+90 532 431 19 53",
       email: "Email",
       emailValue: "operasyon@mymiroglulojistik.com.tr",
       rights: "All rights reserved.",
-      privacy: "Privacy Policy",  
+      privacy: "Privacy Policy",
       terms: "Terms of Use",
     },
     nav: {
@@ -60,12 +62,14 @@ export const translations = {
       scrollDown: "Scroll Down",
     },
     seo: {
-      title: "MY Miroğlu Logistics | International Transportation and Logistics Services",
+      title:
+        "My Miroğlu Logistics | Miroğlu Logistics | International Transportation and Logistics Services",
       description:
-        "Turkey's trusted logistics partner. International transportation, shipping, warehousing and partial transportation services.",
-      keywords: "MY Miroğlu Logistics, Miroğlu Transportation, Miroğlu Shipping, Miroğlu Cargo, international logistics, domestic transportation, shipping solutions, İzmir logistics, İstanbul transportation, Ankara shipping, Bursa cargo",
-      author: "MY Miroğlu Logistics",
-      siteName: "MY Miroğlu Logistics",
+        "My Miroğlu Logistics and Miroğlu Logistics - Turkey's trusted logistics partner. International transportation, shipping, warehousing and partial transportation services.",
+      keywords:
+        "My Miroğlu Logistics, Miroğlu Logistics, my miroğlu logistics, miroğlu logistics, Miroğlu Transportation, Miroğlu Shipping, Miroğlu Cargo, international logistics, domestic transportation, shipping solutions, İzmir logistics, İstanbul transportation, Ankara shipping, Bursa cargo",
+      author: "My Miroğlu Logistics",
+      siteName: "My Miroğlu Logistics",
       locale: "en_US",
       language: "English",
       country: "Turkey",
@@ -76,7 +80,7 @@ export const translations = {
       title: "Your Success, Our Mission",
       description: "About Us",
       content:
-        "Since 2000, MY Miroğlu International Logistics has been your trusted partner in European road transportation. Our İzmir-based team of professionals and extensive fleet ensure your goods reach every corner of Europe safely, quickly, and efficiently. We understand that every shipment represents your business success, and we're committed to delivering not just your cargo, but your peace of mind. Let us be the reliable partner that helps your business grow.",
+        "Since 2000, My Miroğlu Logistics and Miroğlu Logistics has been your trusted partner in European road transportation. Our İzmir-based team of professionals and extensive fleet ensure your goods reach every corner of Europe safely, quickly, and efficiently. We understand that every shipment represents your business success, and we're committed to delivering not just your cargo, but your peace of mind. Let us be the reliable partner that helps your business grow.",
     },
     services: {
       heading: "Our Services",
@@ -173,17 +177,19 @@ export const translations = {
       sending: "Gönderiliyor...",
       headquarters: "Merkez",
       garage: "Garaj",
-      headquartersAddress: "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
+      headquartersAddress:
+        "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
       garageAddress: "Kemalpaşa OSB, 78. Sk. 40-78, 35730 Kemalpaşa/İzmir",
     },
     footer: {
-      companyName: "MY Miroğlu Lojistik",
+      companyName: "My Miroğlu Lojistik",
       companyDescription:
         "Küresel lojistikte güvenilir ortağınız. 20+ ülkede hizmet veren deneyimli ekibimizle, dünyayı daha yakın hale getiriyoruz.",
       quickLinks: "Hızlı Linkler",
       contactInfo: "İletişim Bilgileri",
       address: "Adres",
-      addressValue: "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
+      addressValue:
+        "Kemalpaşa Mah. 7414. Sok. Kemalpaşa 5. San. Sit. Pınarbaşı, Bornova, İzmir.",
       phone: "Telefon",
       phoneValue: "+90 532 431 19 53",
       email: "E-posta",
@@ -215,12 +221,14 @@ export const translations = {
       scrollDown: "Aşağı Kaydır",
     },
     seo: {
-      title: "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
+      title:
+        "My Miroğlu Lojistik | Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
       description:
-        "Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri.",
-      keywords: "MY Miroğlu Lojistik, Miroğlu Taşımacılık, Miroğlu Nakliye, Miroğlu Kargo, uluslararası lojistik, yurtiçi taşımacılık, nakliye çözümleri, İstanbul lojistik, Ankara taşımacılık, İzmir nakliye, Bursa kargo",
-      author: "MY Miroğlu Lojistik",
-      siteName: "MY Miroğlu Lojistik",
+        "My Miroğlu Lojistik ve Miroğlu Lojistik - Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri.",
+      keywords:
+        "My Miroğlu Lojistik, Miroğlu Lojistik, my miroğlu lojistik, miroğlu lojistik, Miroğlu Taşımacılık, Miroğlu Nakliye, Miroğlu Kargo, uluslararası lojistik, yurtiçi taşımacılık, nakliye çözümleri, İstanbul lojistik, Ankara taşımacılık, İzmir nakliye, Bursa kargo",
+      author: "My Miroğlu Lojistik",
+      siteName: "My Miroğlu Lojistik",
       locale: "tr_TR",
       language: "Turkish",
       country: "Türkiye",
@@ -231,7 +239,7 @@ export const translations = {
       title: "Başarınız, Misyonumuz",
       description: "Hakkımızda",
       content:
-        "2000 yılından beri MY Miroğlu Uluslararası Lojistik, Avrupa karayolu taşımacılığında güvenilir ortağınız olmuştur. İzmir merkezli profesyonel ekibimiz ve geniş araç filomuzla, eşyalarınızı Avrupa'nın her köşesine güvenli, hızlı ve verimli bir şekilde ulaştırıyoruz. Her sevkiyatın işinizin başarısını temsil ettiğini biliyoruz ve sadece kargonuzu değil, aynı zamanda huzurunuzu da teslim etmeye kararlıyız. İşinizin büyümesine yardımcı olan güvenilir ortağınız olalım.",
+        "2000 yılından beri My Miroğlu Lojistik ve Miroğlu Lojistik, Avrupa karayolu taşımacılığında güvenilir ortağınız olmuştur. İzmir merkezli profesyonel ekibimiz ve geniş araç filomuzla, eşyalarınızı Avrupa'nın her köşesine güvenli, hızlı ve verimli bir şekilde ulaştırıyoruz. Her sevkiyatın işinizin başarısını temsil ettiğini biliyoruz ve sadece kargonuzu değil, aynı zamanda huzurunuzu da teslim etmeye kararlıyız. İşinizin büyümesine yardımcı olan güvenilir ortağınız olalım.",
     },
     services: {
       heading: "Hizmetlerimiz",

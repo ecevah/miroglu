@@ -30,16 +30,18 @@ export const metadata = {
   metadataBase: new URL("https://www.mymiroglulojistik.com.tr"),
   title: {
     default:
-      "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
+      "My Miroğlu Lojistik | Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
     template:
-      "%s | MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
+      "%s | My Miroğlu Lojistik | Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
   },
   description:
-    "MY Miroğlu Lojistik - Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri. İstanbul, Ankara, İzmir, Bursa'da profesyonel lojistik çözümleri.",
+    "My Miroğlu Lojistik ve Miroğlu Lojistik - Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri. İstanbul, Ankara, İzmir, Bursa'da profesyonel lojistik çözümleri.",
   keywords: [
     // --- Türkçe Anahtar Kelimeler ---
     "My Miroğlu Lojistik",
     "Miroğlu Lojistik",
+    "my miroğlu lojistik",
+    "miroğlu lojistik",
     "My Miroğlu Taşımacılık",
     "Miroğlu Taşımacılık",
     "Miroğlu Nakliye",
@@ -154,11 +156,11 @@ export const metadata = {
     type: "website",
     locale: "tr_TR",
     url: "https://www.mymiroglulojistik.com.tr",
-    siteName: "MY Miroğlu Lojistik",
+    siteName: "My Miroğlu Lojistik",
     title:
-      "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
+      "My Miroğlu Lojistik | Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
     description:
-      "Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri.",
+      "My Miroğlu Lojistik ve Miroğlu Lojistik - Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri.",
     images: [
       {
         url: "/images/Mercedes-with-Text.png",
@@ -171,9 +173,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
+      "My Miroğlu Lojistik | Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
     description:
-      "Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri.",
+      "My Miroğlu Lojistik ve Miroğlu Lojistik - Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri.",
     images: ["/images/Mercedes-with-Text.png"],
   },
   alternates: {
@@ -191,9 +193,14 @@ export const metadata = {
   category: "Transportation and Logistics",
   classification: "Business",
   icons: {
-    icon: "/logo/fav-logo.svg",
-    shortcut: "/logo/fav-logo.svg",
-    apple: "/logo/fav-logo.svg",
+    icon: [
+      { url: "/logo/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/logo/favicon.ico", sizes: "16x16", type: "image/x-icon" },
+    ],
+    shortcut: "/logo/favicon.ico",
+    apple: [
+      { url: "/logo/favicon.ico", sizes: "180x180", type: "image/x-icon" },
+    ],
   },
   manifest: "/manifest.json",
 };
@@ -205,7 +212,8 @@ export default function RootLayout({ children }) {
       {
         "@type": "Organization",
         "@id": "https://www.mymiroglulojistik.com.tr/#organization",
-        name: "MY Miroğlu Lojistik",
+        name: "My Miroğlu Lojistik",
+        alternateName: "Miroğlu Lojistik",
         url: "https://www.mymiroglulojistik.com.tr",
         logo: {
           "@type": "ImageObject",
@@ -214,7 +222,7 @@ export default function RootLayout({ children }) {
           height: 100,
         },
         description:
-          "Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri.",
+          "My Miroğlu Lojistik ve Miroğlu Lojistik - Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri.",
         foundingDate: "2020",
         address: {
           "@type": "PostalAddress",
@@ -236,7 +244,8 @@ export default function RootLayout({ children }) {
       {
         "@type": "LocalBusiness",
         "@id": "https://www.mymiroglulojistik.com.tr/#localbusiness",
-        name: "MY Miroğlu Lojistik",
+        name: "My Miroğlu Lojistik",
+        alternateName: "Miroğlu Lojistik",
         image:
           "https://www.mymiroglulojistik.com.tr/images/Mercedes-with-Text.png",
         telephone: "+90-532-431-19-53", // Gerçek telefon numaranızı girin
@@ -334,8 +343,10 @@ export default function RootLayout({ children }) {
         "@type": "WebSite",
         "@id": "https://www.mymiroglulojistik.com.tr/#website",
         url: "https://www.mymiroglulojistik.com.tr",
-        name: "MY Miroğlu Lojistik",
-        description: "Türkiye'nin güvenilir lojistik ortağı",
+        name: "My Miroğlu Lojistik",
+        alternateName: "Miroğlu Lojistik",
+        description:
+          "My Miroğlu Lojistik ve Miroğlu Lojistik - Türkiye'nin güvenilir lojistik ortağı",
         publisher: {
           "@id": "https://www.mymiroglulojistik.com.tr/#organization",
         },
@@ -381,7 +392,22 @@ export default function RootLayout({ children }) {
           hrefLang="x-default"
           href="https://www.mymiroglulojistik.com.tr"
         />
+        <link
+          rel="icon"
+          href="/logo/favicon.ico"
+          sizes="32x32"
+          type="image/x-icon"
+        />
+        <link
+          rel="icon"
+          href="/logo/favicon.ico"
+          sizes="16x16"
+          type="image/x-icon"
+        />
+        <link rel="shortcut icon" href="/logo/favicon.ico" />
+        <link rel="apple-touch-icon" href="/logo/favicon.ico" sizes="180x180" />
 
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

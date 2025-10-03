@@ -16,28 +16,43 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{t.seo?.title || "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri"}</title>
+        <title>
+          {t.seo?.title ||
+            "My Miroğlu Lojistik | Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri"}
+        </title>
         <meta
           name="description"
           content={
             t.seo?.description ||
-            "MY Miroğlu Lojistik - Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri. İstanbul, Ankara, İzmir, Bursa'da profesyonel lojistik çözümleri."
+            "My Miroğlu Lojistik ve Miroğlu Lojistik - Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri. İstanbul, Ankara, İzmir, Bursa'da profesyonel lojistik çözümleri."
           }
         />
         <meta
           name="keywords"
-          content={t.seo?.keywords || "MY Miroğlu Lojistik, Miroğlu Taşımacılık, Miroğlu Nakliye, Miroğlu Kargo, uluslararası lojistik, yurtiçi taşımacılık, nakliye çözümleri, İstanbul lojistik, Ankara taşımacılık, İzmir nakliye, Bursa kargo"}
+          content={
+            t.seo?.keywords ||
+            "My Miroğlu Lojistik, Miroğlu Lojistik, my miroğlu lojistik, miroğlu lojistik, Miroğlu Taşımacılık, Miroğlu Nakliye, Miroğlu Kargo, uluslararası lojistik, yurtiçi taşımacılık, nakliye çözümleri, İstanbul lojistik, Ankara taşımacılık, İzmir nakliye, Bursa kargo"
+          }
         />
-        <meta name="author" content={t.seo?.author || "MY Miroğlu Lojistik"} />
+        <meta name="author" content={t.seo?.author || "My Miroğlu Lojistik"} />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         {/* Open Graph */}
-        <meta property="og:title" content={t.seo?.title || "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri"} />
+        <meta
+          property="og:title"
+          content={
+            t.seo?.title ||
+            "My Miroğlu Lojistik | Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri"
+          }
+        />
         <meta
           property="og:description"
-          content={t.seo?.description || "Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri."}
+          content={
+            t.seo?.description ||
+            "My Miroğlu Lojistik ve Miroğlu Lojistik - Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri."
+          }
         />
         <meta property="og:type" content="website" />
         <meta
@@ -50,15 +65,27 @@ export default function Home() {
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content={t.seo?.siteName || "MY Miroğlu Lojistik"} />
+        <meta
+          property="og:site_name"
+          content={t.seo?.siteName || "My Miroğlu Lojistik"}
+        />
         <meta property="og:locale" content={t.seo?.locale || "tr_TR"} />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={t.seo?.title || "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri"} />
+        <meta
+          name="twitter:title"
+          content={
+            t.seo?.title ||
+            "My Miroğlu Lojistik | Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri"
+          }
+        />
         <meta
           name="twitter:description"
-          content={t.seo?.description || "Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri."}
+          content={
+            t.seo?.description ||
+            "My Miroğlu Lojistik ve Miroğlu Lojistik - Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri."
+          }
         />
         <meta
           name="twitter:image"
@@ -67,6 +94,22 @@ export default function Home() {
 
         {/* Canonical URL */}
         <link rel="canonical" href="https://www.mymiroglulojistik.com.tr" />
+
+        {/* Favicon */}
+        <link
+          rel="icon"
+          href="/logo/favicon.ico"
+          sizes="32x32"
+          type="image/x-icon"
+        />
+        <link
+          rel="icon"
+          href="/logo/favicon.ico"
+          sizes="16x16"
+          type="image/x-icon"
+        />
+        <link rel="shortcut icon" href="/logo/favicon.ico" />
+        <link rel="apple-touch-icon" href="/logo/favicon.ico" sizes="180x180" />
 
         {/* Additional SEO */}
         <meta name="geo.region" content="TR" />
@@ -79,10 +122,19 @@ export default function Home() {
           name="business:contact_data:street_address"
           content="İzmir, Türkiye"
         />
-        <meta name="business:contact_data:locality" content={t.seo?.city || "İzmir"} />
-        <meta name="business:contact_data:region" content={t.seo?.city || "İzmir"} />
+        <meta
+          name="business:contact_data:locality"
+          content={t.seo?.city || "İzmir"}
+        />
+        <meta
+          name="business:contact_data:region"
+          content={t.seo?.city || "İzmir"}
+        />
         <meta name="business:contact_data:postal_code" content="35000" />
-        <meta name="business:contact_data:country_name" content={t.seo?.country || "Türkiye"} />
+        <meta
+          name="business:contact_data:country_name"
+          content={t.seo?.country || "Türkiye"}
+        />
 
         {/* Google Search Console & Analytics */}
         <meta
@@ -102,15 +154,24 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content={t.seo?.siteName || "MY Miroğlu Lojistik"} />
+        <meta
+          name="apple-mobile-web-app-title"
+          content={t.seo?.siteName || "My Miroğlu Lojistik"}
+        />
 
         {/* Rich Snippets */}
-        <meta name="application-name" content={t.seo?.siteName || "MY Miroğlu Lojistik"} />
+        <meta
+          name="application-name"
+          content={t.seo?.siteName || "My Miroğlu Lojistik"}
+        />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
 
         {/* Language and Content */}
-        <meta httpEquiv="content-language" content={t.seo?.locale?.split('_')[0] || "tr"} />
+        <meta
+          httpEquiv="content-language"
+          content={t.seo?.locale?.split("_")[0] || "tr"}
+        />
         <meta name="language" content={t.seo?.language || "Turkish"} />
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="global" />
@@ -140,7 +201,6 @@ export default function Home() {
         <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
         <meta httpEquiv="Expires" content="31536000" />
 
-
         {/* Google Search Console Structured Data */}
         <script
           type="application/ld+json"
@@ -148,12 +208,16 @@ export default function Home() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              name: t.seo?.title || "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
-              description: t.seo?.description || "Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri.",
+              name:
+                t.seo?.title ||
+                "My Miroğlu Lojistik | Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri",
+              description:
+                t.seo?.description ||
+                "My Miroğlu Lojistik ve Miroğlu Lojistik - Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri.",
               url: "https://www.mymiroglulojistik.com.tr",
               mainEntity: {
                 "@type": "Organization",
-                name: t.seo?.siteName || "MY Miroğlu Lojistik",
+                name: t.seo?.siteName || "My Miroğlu Lojistik",
                 url: "https://www.mymiroglulojistik.com.tr",
                 logo: "https://www.mymiroglulojistik.com.tr/logo/logo.svg",
                 contactPoint: {
@@ -169,11 +233,13 @@ export default function Home() {
                   addressCountry: "TR",
                 },
                 sameAs: [
-                  {/*
+                  {
+                    /*
                   "https://www.facebook.com/miroglulojistik",
                   "https://www.instagram.com/miroglulojistik",
                   "https://www.linkedin.com/company/miroglulojistik",
-                  */}
+                  */
+                  },
                 ],
               },
               breadcrumb: {
@@ -203,7 +269,10 @@ export default function Home() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-W94KFCQRKQ', {
-            page_title: '${t.seo?.title || "MY Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri"}',
+            page_title: '${
+              t.seo?.title ||
+              "My Miroğlu Lojistik | Miroğlu Lojistik | Uluslararası Taşımacılık ve Lojistik Hizmetleri"
+            }',
             page_location: 'https://www.mymiroglulojistik.com.tr',
             custom_map: {
               'custom_parameter_1': 'logistics_company',

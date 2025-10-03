@@ -1,5 +1,5 @@
 {
-  "name": "MY Miroğlu Lojistik",
+  "name": "My Miroğlu Lojistik",
   "short_name": "Miroğlu Lojistik",
   "description": "Türkiye'nin güvenilir lojistik ortağı. Uluslararası taşımacılık, nakliye, kargo, depolama ve parsiyel taşımacılık hizmetleri.",
   "start_url": "/",
@@ -9,20 +9,29 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/logo/fav-logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "src": "/logo/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
     },
     {
-      "src": "/logo/logo.svg",
+      "src": "/logo/favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/logo/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/logo/favicon.ico",
       "sizes": "192x192",
-      "type": "image/svg+xml"
+      "type": "image/x-icon"
     },
     {
-      "src": "/logo/logo.svg",
+      "src": "/logo/favicon.ico",
       "sizes": "512x512",
-      "type": "image/svg+xml"
+      "type": "image/x-icon"
     }
   ],
   "categories": ["business", "transportation", "logistics"],
