@@ -6,11 +6,15 @@ import CookieConsent from "@/components/CookieConsent";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  preload: true,
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  preload: true,
+  display: "swap",
 });
 
 const anton = Anton({
@@ -18,12 +22,14 @@ const anton = Anton({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
 });
 
 export const metadata = {
@@ -406,6 +412,22 @@ export default function RootLayout({ children }) {
         />
         <link rel="shortcut icon" href="/logo/favicon.ico" />
         <link rel="apple-touch-icon" href="/logo/favicon.ico" sizes="180x180" />
+
+        {/* Font Preload Optimization */}
+        <link
+          rel="preload"
+          href="/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
 
         {/* Structured Data */}
         <script

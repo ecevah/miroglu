@@ -261,7 +261,7 @@ export default function Home() {
       {/* Google Analytics & Search Console */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-W94KFCQRKQ"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
